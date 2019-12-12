@@ -1,0 +1,218 @@
+/* Hoja de estilo del examen de Lenguaje de Marcas de 1º DAM
+   autor: Iván Torres de Oses       Fecha: 12/12/2019 */
+* {
+
+    margin: 0;
+    padding: 0;
+}
+/* Ponemos la fuente de letra */
+@font-face {
+
+    font-family: Droid;
+    src: url("../fuentes/DroidSans.ttf");
+}
+@font-face {
+
+    font-family: DroidBold;
+    src: url("../fuentes/DroidSans-Bold.ttf");
+}
+/* Para el body */
+body {
+
+    font-family: 'Droid';
+}
+/* Estilo para el header de la página */
+header {
+
+    background-image: url(../imagenes/cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    height: 300px;
+}
+/* Estilo para el topnav de la pagina */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(224, 241, 123);
+    color: black;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+/* Para los distintos formatos de textos de la página */
+
+#titulo {
+
+    margin: 30px;
+    font-family: 'DroidBold';
+    text-align: center;
+    color: pink;
+}
+#textFooter {
+
+    padding: 3px;
+    font-size: 13px;
+    font-weight: lighter;
+}
+.textPolaroid {
+
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* Para la galería de imagenes */
+.polaroid {
+
+    margin-left: 10%;
+}
+.polaroid img {
+
+    position: relative;
+    width: 300px;
+}
+.container {
+    float: left;
+    position: relative;
+    width: 300px;
+    margin: 20px;
+  }
+.overlay  {
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.container:hover .overlay {
+    opacity: 0.7;
+  }
+#clear { /* Esto se usa para limpiar el float: left de la galería. */
+
+    clear: both;
+}
+/* Para el footer */
+
+footer {
+
+    background-color: rgb(32, 32, 32);
+    color: whitesmoke;
+    text-align: center;
+}
+/* Para la parte responsive de la página */
+
+@media screen and (max-width: 1100px) {
+
+    .polaroid {
+
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width: 900px) {
+
+    .polaroid {
+
+        margin-left: 10%;
+    }
+}
+/* Para hacer que la barra de navegación se cambie cuando los enlaces empiezan a quedarse sin espacio*/
+@media screen and (max-width: 820px) {
+    .topnav a:not(:first-child) {
+
+        display: none;
+    }
+    .topnav a.icon {
+
+      float: right;
+      display: block;
+    }
+    .topnav.responsive {
+
+        position: relative;
+    }
+    .topnav.responsive .icon {
+
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+@media screen and (max-width: 756px) {
+
+    .polaroid img {
+
+        width: 250px;
+    }
+    .container {
+
+        width:  250px;
+    }
+}
+@media screen and (max-width: 650px) {
+    
+    .polaroid {
+
+        margin-left: 20%;
+    }
+}
+/* A partir de aquí es para moviles */
+@media screen and (max-width: 510px) {
+
+    header {
+
+        background-image: url("../imagenes/cabecera2.jpg");
+        background-position: center;
+        height: 700px;
+    }
+}
+@media screen and (max-width: 400px) {
+
+    .polaroid {
+
+        margin-left: 5%;
+    }
+}
+@media screen and (max-width: 300px) {
+
+    .polaroid {
+
+        margin-left: 0;
+    }
+    .container {
+
+        margin: 10px;
+    }
+}
